@@ -15,7 +15,7 @@ module full_adder(sum,Cout,A,B,Cin);
   half_adder HA1(A,B,w1,w2);
   half_adder HA2(w1,Cin,sum,w3);
 
-    assign Cout = w1 | w2;
+    assign Cout = w2 | w3;
 endmodule
 
 module test_full_adder;
@@ -33,3 +33,4 @@ module test_full_adder;
   initial
     $monitor($time,"\t, A=%b, B=%b, Cin=%b", A, B, Cin);
 endmodule
+
