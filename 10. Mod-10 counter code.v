@@ -4,7 +4,7 @@ module mod_10_counter(count,clk,rst);
   
   always@(posedge clk)
     if(!rst || count == 9)
-      count <= 1'b0;
+      count <= 4'b0000;
   else
     count <= count +1;
   
@@ -36,4 +36,5 @@ module tb;
     #100 $finish();
   end
   
+
 endmodule
